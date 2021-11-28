@@ -24,10 +24,7 @@ interface IFetchUsersErrorAction {
     payload: string;
 }
 
-interface IUserAction {
-    type: string;
-    payload?: any;
-}
+type UserAction = IFetchUsersAction | IFetchUsersSuccessAction | IFetchUsersErrorAction;
 
 const initialStte: IUserState = {
     users: [],
@@ -35,7 +32,7 @@ const initialStte: IUserState = {
     error: null
 }
 
-export const userReducer = (state = initialStte, action: IUserAction): IUserState => {
+export const userReducer = (state = initialStte, action: UserAction): IUserState => {
     switch (action.type) {
         case UserActionTypes.FETCH_USERS:
             return {loading: true, error: null, users: [] }
