@@ -8,14 +8,14 @@ const UserList: React.FC = () => {
     const dispatch  = useDispatch();
 
     React.useEffect(() => {
-        dispatch(fetchUsers);
+        dispatch(fetchUsers());
     }, []);
-
-    
 
     return (
         <div>
-
+            {users.map (user => 
+                <div key={user.name}>{user.name}</div>
+            )}
         </div>
     )
 }
