@@ -11,6 +11,14 @@ const UserList: React.FC = () => {
         dispatch(fetchUsers());
     }, []);
 
+    if (loading) {
+        return <h1>Loading</h1>
+    }
+
+    if (error){
+        return <h1>{error}</h1>
+    }
+
     return (
         <div>
             {users.map (user => 
