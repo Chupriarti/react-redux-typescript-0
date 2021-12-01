@@ -1,5 +1,5 @@
 export interface ITodoState {
-    todos: [];
+    todos: any[];
     loading: boolean;
     error: null | string;
     page: number;
@@ -12,8 +12,6 @@ export enum TodoActionTypes {
     FETCH_TODOS_ERROR = "FETCH_TODOS_ERROR", 
     SET_TODO_PAGE = "SET_TODO_PAGE"
 }
-
-
 
 interface IFetchTodoAction {
     type: TodoActionTypes.FETCH_TODOS;
