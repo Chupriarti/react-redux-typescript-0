@@ -1,6 +1,14 @@
 import { ITodoState, TodoAction } from "../action-creators/todo";
 
-export const todoReducer = (state: ITodoState, action: TodoAction): ITodoState => {
+const initialState: ITodoState = {
+    todos: [],
+    page: 1,
+    error: null,
+    limit: 10,
+    loading: false
+}
+
+export const todoReducer = (state: ITodoState = initialState, action: TodoAction): ITodoState => {
     switch (action){
         default:
             return state;
