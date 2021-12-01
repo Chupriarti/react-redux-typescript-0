@@ -18,17 +18,17 @@ interface IFetchTodoAction {
 }
 
 interface IFetchTodoSuccessAction {
-    type: TodoActionTypes.FETCH_TODOS;
+    type: TodoActionTypes.FETCH_TODOS_SUCCESS;
     payload: any[];
 }
 
 interface IFetchTodoErrorAction {
-    type: TodoActionTypes.FETCH_TODOS;
+    type: TodoActionTypes.FETCH_TODOS_ERROR;
     payload: string;
 }
 
 interface ISetTodoPageAction {
-    type: TodoActionTypes.FETCH_TODOS;
+    type: TodoActionTypes.SET_TODO_PAGE;
     payload: number;
 }
 
