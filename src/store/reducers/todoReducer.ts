@@ -1,4 +1,4 @@
-import { ITodoState, TodoAction, TodoActionTypes } from "../action-creators/todo";
+import { ITodoState, TodoAction, TodoActionTypes } from "../../types/todo"
 
 const initialState: ITodoState = {
     todos: [],
